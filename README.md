@@ -15,7 +15,7 @@
 -testfasta  | 	 xxx.fasta
 -testpos   | 	正例数  
 -testneg  |		反例数  
--cv   |		交叉验证折数  
+-cv   |		交叉验证折数默认10  
 ### 必须设置的参数
 * -trainfasta
 * -trainpos
