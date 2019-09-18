@@ -190,17 +190,17 @@ def main():
             else:
                 l.append(0)
         l=np.array(l)
-        label=[0,1]
 
         print("ACC:{}".format(metrics.accuracy_score(y1,l)))
         print("MCC:{}\n".format(metrics.matthews_corrcoef(y1,l)))
-        print(classification_report(y1, l, labels=label))
+        print(classification_report(y1, l))
         print("confusion matrix\n")
         print(pd.crosstab(pd.Series(y1, name='Actual'), pd.Series(l, name='Predicted')))
     else:
         skf = StratifiedKFold(n_splits=args.cv)
         acc = []
-        v=0
+        testlabel=[]
+        truelabel=[]
         for train_index, test_index in skf.split(x, y):
 
             X_train, X_test = x[train_index], x[test_index]
@@ -222,8 +222,17 @@ def main():
                     l.append(0)
 
             acc.append(metrics.accuracy_score(y_test, l))
-            print("ACC:{}".format(metrics.accuracy_score(y_test, l)))
-        print(np.mean(acc))
+            testlabel+=l
+            truelabel+=y_test.tolist()
+
+            # print("ACC:{}".format(metrics.accuracy_score(y_test, l)))
+        # print(np.mean(acc))
+        print("ACC:{}".format(metrics.accuracy_score(truelabel,testlabel)))
+        print("MCC:{}\n".format(metrics.matthews_corrcoef(truelabel, testlabel)))
+        print(classification_report(truelabel, testlabel))
+        print("confusion matrix\n")
+        print(pd.crosstab(pd.Series(truelabel, name='Actual'), pd.Series(testlabel, name='Predicted')))
+
 
 
 
