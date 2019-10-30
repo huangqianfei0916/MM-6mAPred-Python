@@ -22,5 +22,11 @@
 * -trainneg
 ### 使用方法
 *********************
-* 交叉验证：python tans_pro.py  -trainfasta XXX.fasta -trainpos posnum -trainneg negnum -cv cv
-* 独立测试：python tans_pro.py  -trainfasta XXX.fasta -trainpos posnum -trainneg negnum -testfasta XXX.fasta -testpos num -testneg num 
+* 交叉验证用法：
+```py
+python tans_pro.py  -trainfasta XXX.fasta -trainpos posnum -trainneg negnum -cv cv
+```
+* 独立测试用法：
+```py
+python tans_pro.py  -trainfasta XXX.fasta -trainpos posnum -trainneg negnum -testfasta XXX.fasta -testpos num -testneg num 
+```
