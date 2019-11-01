@@ -16,15 +16,15 @@ def marko(fasta):
             list.append(a)
     m = np.array(list)
     '''计算首字母的频率'''
-    atgc = {}
-    for i in range(len(m)):
-        if m[i][0][0] in atgc:
+#     atgc = {}
+#     for i in range(len(m)):
+#         if m[i][0][0] in atgc:
 
-            atgc[m[i][0][0]] = atgc[m[i][0][0]] + 1
-        else:
-            atgc[m[i][0][0]] = 1
-    for i, j in atgc.items():
-        atgc[i] = atgc[i] / len(m)
+#             atgc[m[i][0][0]] = atgc[m[i][0][0]] + 1
+#         else:
+#             atgc[m[i][0][0]] = 1
+#     for i, j in atgc.items():
+#         atgc[i] = atgc[i] / len(m)
 
 
     # ll = ["aa", "at", "ag", "ac", "ta", "tt", "tg", "tc", "ga", "gt", "gg", "gc", "ca", "ct", "cg", "cc"]
