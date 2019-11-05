@@ -2,7 +2,6 @@
 
 * tans_pro.py 是6ma_Markov的实现，其中包含交叉验证和独立测试。
 * Transition_probability_feature.py 是将转移概率当特征。
-* Transition_probability_total.py 是类似转移概率计算的特征，实验效果要比完全的转移概率略好。
 ##### 序列必须等长 ！
 ### 参数设置
 *******************
