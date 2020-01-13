@@ -1,7 +1,6 @@
 # Markov
 
 * tans_pro.py 是6ma_Markov的实现，其中包含交叉验证和独立测试。
-* Transition_probability_feature.py 是将转移概率当特征。
 #### 序列必须等长 ！
 ### 参数设置
 *******************
