@@ -1,4 +1,4 @@
-# Markov
+# markov
 
 * tans_pro.py 是6ma_Markov的实现，其中包含交叉验证和独立测试。
 #### 序列必须等长 !!！
